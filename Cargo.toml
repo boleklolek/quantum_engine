@@ -1,0 +1,19 @@
+[package]
+name = "quantum_engine"
+version = "0.1.0"
+edition = "2021"
+authors = ["Tu Nombre"]
+license = "MIT"
+description = "Hartree-Fock / DFT engine in Rust"
+
+[dependencies]
+nalgebra = "0.34"
+libc = "0.2"
+serde = { version = "1.0", features = ["derive"] }
+serde_yaml = "0.9"
+libm ="0.2"
+
+[features]
+default = []
+mpi = []
+

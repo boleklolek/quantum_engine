@@ -1,0 +1,10 @@
+implementation=CPython
+version=3.12
+shared=true
+abi3=false
+lib_name=python3.12
+lib_dir=/usr/lib
+executable=/home/bolek/quantum_engine_release_full_no_deps_v2/env/bin/python
+pointer_width=64
+build_flags=
+suppress_build_script_link_lines=false

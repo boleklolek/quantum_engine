@@ -1,0 +1,5 @@
+/home/bolek/Projectos/quantum_engine/target/debug/build/paste-5fcd9feca38fca59/build_script_build-5fcd9feca38fca59.d: /home/bolek/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/paste-1.0.15/build.rs
+
+/home/bolek/Projectos/quantum_engine/target/debug/build/paste-5fcd9feca38fca59/build_script_build-5fcd9feca38fca59: /home/bolek/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/paste-1.0.15/build.rs
+
+/home/bolek/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/paste-1.0.15/build.rs:
