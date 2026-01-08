@@ -1,0 +1,2088 @@
+   Compiling autocfg v1.5.0
+   Compiling proc-macro2 v1.0.104
+   Compiling unicode-ident v1.0.22
+   Compiling quote v1.0.42
+   Compiling serde_core v1.0.228
+    Checking bytemuck v1.24.0
+   Compiling paste v1.0.15
+   Compiling serde v1.0.228
+   Compiling typenum v1.19.0
+   Compiling libm v0.2.15
+    Checking rawpointer v0.2.1
+   Compiling libc v0.2.178
+    Checking equivalent v1.0.2
+    Checking hashbrown v0.16.1
+    Checking unsafe-libyaml v0.2.11
+    Checking safe_arch v0.7.4
+    Checking itoa v1.0.17
+    Checking ryu v1.0.22
+   Compiling num-traits v0.2.19
+   Compiling matrixmultiply v0.3.10
+    Checking wide v0.7.33
+    Checking indexmap v2.12.1
+   Compiling syn v2.0.112
+    Checking num-integer v0.1.46
+    Checking approx v0.5.1
+    Checking num-complex v0.4.6
+    Checking num-rational v0.4.2
+    Checking simba v0.9.1
+   Compiling serde_derive v1.0.228
+   Compiling nalgebra-macros v0.3.0
+    Checking serde_yaml v0.9.34+deprecated
+    Checking nalgebra v0.34.1
+    Checking quantum_engine v0.1.0 (/home/bolek/Projectos/quantum_engine)
+warning: unused import: `BasisShell`
+ --> src/system/basis_loader.rs:6:44
+  |
+6 | use crate::basis::reader::{read_basis_set, BasisShell};
+  |                                            ^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: empty line after doc comment
+ --> src/system/units.rs:4:1
+  |
+4 | / /// atomic units (Bohr, Hartree).
+5 | |
+  | |_^
+6 |   /// Bohr radius in Angstrom
+7 |   pub const BOHR_TO_ANGSTROM: f64 = 0.529177210903;
+  |   -------------------------- the comment documents this constant item
+  |
+  = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.92.0/index.html#empty_line_after_doc_comments
+  = note: `#[warn(clippy::empty_line_after_doc_comments)]` on by default
+  = help: if the empty line is unintentional, remove it
+help: if the comment should document the parent module use an inner doc comment
+  |
+1 ~ //! Physical constants and unit conversions
+2 ~ //!
+3 ~ //! All internal quantities in the engine are assumed to be in
+4 ~ //! atomic units (Bohr, Hartree).
+  |
+help: if the documentation should include the empty line include it in the comment
+  |
+5 | ///
+  |
+
+warning: unused import: `std::collections::HashMap`
+ --> src/system/periodic_table.rs:3:5
+  |
+3 | use std::collections::HashMap;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `std::collections::HashMap`
+ --> src/basis/reader.rs:3:5
+  |
+3 | use std::collections::HashMap;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::basis::shell::Shell`
+ --> src/integrals/eri/eri.rs:3:5
+  |
+3 | use crate::basis::shell::Shell;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused doc comment
+  --> src/integrals/eri/eri.rs:85:9
+   |
+85 |         ///let c = [atom.x, atom.y, atom.z];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+86 |         let c = atom.position;
+   |         ---------------------- rustdoc does not generate documentation for statements
+   |
+   = help: use `//` for a plain comment
+   = note: `#[warn(unused_doc_comments)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `crate::integrals::eri::eri_hrr::hrr_ab`
+ --> src/integrals/eri/eri_contracted.rs:7:5
+  |
+7 | use crate::integrals::eri::eri_hrr::hrr_ab;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: empty line after doc comment
+   --> src/integrals/boys.rs:107:1
+    |
+107 | / /// Boys function F_0
+108 | |
+    | |_^
+109 |   pub fn boys0(t: f64) -> f64 {
+    |   ------------ the comment documents this function
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.92.0/index.html#empty_line_after_doc_comments
+    = help: if the empty line is unintentional, remove it
+
+warning: empty line after doc comment
+  --> src/scf/density.rs:10:1
+   |
+10 | / ///
+11 | |
+   | |_^
+12 |   use nalgebra::DMatrix;
+   |   - the comment documents this `use` import
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.92.0/index.html#empty_line_after_doc_comments
+   = help: if the empty line is unintentional, remove it
+help: if the comment should document the parent module use an inner doc comment
+   |
+ 7 ~ //! Build density matrix (RHF / DFT)
+ 8 ~ //!
+ 9 ~ //! P_μν = 2 * Σ_i^occ C_{μi} C_{νi}
+10 ~ //!
+   |
+
+warning: empty line after doc comment
+ --> src/scf/diis.rs:3:1
+  |
+3 | / /// Stores (Fock, error) pairs and extrapolates a new Fock matrix.
+4 | |
+  | |_^
+5 |   pub struct Diis {
+  |   --------------- the comment documents this struct
+  |
+  = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.92.0/index.html#empty_line_after_doc_comments
+  = help: if the empty line is unintentional, remove it
+help: if the comment should document the parent module use an inner doc comment
+  |
+1 ~ //! Direct Inversion in the Iterative Subspace (DIIS)
+2 ~ //!
+3 ~ //! Stores (Fock, error) pairs and extrapolates a new Fock matrix.
+  |
+
+warning: unused import: `DVector`
+  --> src/scf/utils.rs:10:25
+   |
+10 | use nalgebra::{DMatrix, DVector, SymmetricEigen};
+   |                         ^^^^^^^
+
+warning: unused import: `crate::gradients::overlap::overlap_derivative`
+  --> src/gradients/fock.rs:12:5
+   |
+12 | use crate::gradients::overlap::overlap_derivative;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::dft::vxc::build_vxc`
+  --> src/gradients/fock.rs:13:5
+   |
+13 | use crate::dft::vxc::build_vxc;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `crate::mo::space::MoSpace`
+  --> src/mo/transform.rs:10:5
+   |
+10 | use crate::mo::space::MoSpace;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0593]: function is expected to take 4 arguments, but it takes 2 arguments
+  --> src/scf/uhf.rs:32:49
+   |
+32 |       let t = build_matrix(shells, shell_centers, kinetic_shell_shell);
+   |               ------------                        ^^^^^^^^^^^^^^^^^^^ expected function that takes 4 arguments
+   |               |
+   |               required by a bound introduced by this call
+   |
+  ::: src/integrals/kinetic.rs:75:1
+   |
+75 | / pub fn kinetic_shell_shell(
+76 | |     shell_a: &Shell,
+77 | |     shell_b: &Shell,
+78 | | ) -> Vec<Vec<f64>> {
+   | |__________________- takes 2 arguments
+   |
+note: required by a bound in `scf::guess::build_matrix`
+  --> src/scf/guess.rs:43:8
+   |
+37 | pub fn build_matrix<F>(
+   |        ------------ required by a bound in this function
+...
+43 |     F: Fn(&Shell, [f64; 3], &Shell, [f64; 3]) -> Vec<Vec<f64>>,
+   |        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `build_matrix`
+
+error[E0061]: this function takes 3 arguments but 5 arguments were supplied
+  --> src/scf/uhf.rs:34:9
+   |
+34 |         nuclear_attraction_shell_shell(a, ca, b, cb, atoms)
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    --     -- unexpected argument #4 of type `[f64; 3]`
+   |                                           |
+   |                                           unexpected argument #2 of type `[f64; 3]`
+   |
+note: function defined here
+  --> src/integrals/nuclear_attraction.rs:85:8
+   |
+85 | pub fn nuclear_attraction_shell_shell(
+   |        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: remove the extra arguments
+   |
+34 -         nuclear_attraction_shell_shell(a, ca, b, cb, atoms)
+34 +         nuclear_attraction_shell_shell(a, b, atoms)
+   |
+
+error[E0308]: arguments to this function are incorrect
+  --> src/scf/uhf.rs:36:17
+   |
+36 |     let hcore = add(&t, &v);
+   |                 ^^^
+   |
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+  --> src/scf/uhf.rs:36:21
+   |
+36 |     let hcore = add(&t, &v);
+   |                     ^^
+   = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+              found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+  --> src/scf/uhf.rs:36:25
+   |
+36 |     let hcore = add(&t, &v);
+   |                         ^^
+   = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+              found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+  --> src/scf/utils.rs:19:8
+   |
+19 | pub fn add(a: &DMatrix<f64>, b: &DMatrix<f64>) -> DMatrix<f64> {
+   |        ^^^ ----------------  ----------------
+
+error[E0308]: arguments to this function are incorrect
+  --> src/scf/uhf.rs:51:21
+   |
+51 |         let p_tot = add(&p_alpha, &p_beta);
+   |                     ^^^
+   |
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+  --> src/scf/uhf.rs:51:25
+   |
+51 |         let p_tot = add(&p_alpha, &p_beta);
+   |                         ^^^^^^^^
+   = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+              found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+  --> src/scf/uhf.rs:51:35
+   |
+51 |         let p_tot = add(&p_alpha, &p_beta);
+   |                                   ^^^^^^^
+   = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+              found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+  --> src/scf/utils.rs:19:8
+   |
+19 | pub fn add(a: &DMatrix<f64>, b: &DMatrix<f64>) -> DMatrix<f64> {
+   |        ^^^ ----------------  ----------------
+
+error[E0308]: mismatched types
+  --> src/scf/uhf.rs:54:54
+   |
+54 |         let (j, _) = build_jk(shells, shell_centers, &p_tot);
+   |                      --------                        ^^^^^^ expected `&Vec<Vec<f64>>`, found `&Matrix<f64, Dyn, Dyn, ...>`
+   |                      |
+   |                      arguments to this function are incorrect
+   |
+   = note: expected reference `&std::vec::Vec<std::vec::Vec<f64>>`
+              found reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+note: function defined here
+  --> src/scf/jk.rs:11:8
+   |
+11 | pub fn build_jk(
+   |        ^^^^^^^^
+...
+14 |     density: &Vec<Vec<f64>>,
+   |     -----------------------
+
+error[E0425]: cannot find function `build_fock` in this scope
+  --> src/scf/uhf.rs:59:23
+   |
+59 |           let f_alpha = build_fock(&hcore, &j, &k_alpha);
+   |                         ^^^^^^^^^^ help: a function with a similar name exists: `build_jk`
+   |
+  ::: src/scf/jk.rs:11:1
+   |
+11 | / pub fn build_jk(
+12 | |     shells: &[Shell],
+13 | |     shell_centers: &[[f64; 3]],
+14 | |     density: &Vec<Vec<f64>>,
+...  |
+83 | |     (j, k)
+84 | | }
+   | |_- similarly named function `build_jk` defined here
+
+error[E0425]: cannot find function `build_fock` in this scope
+  --> src/scf/uhf.rs:60:23
+   |
+60 |           let f_beta  = build_fock(&hcore, &j, &k_beta);
+   |                         ^^^^^^^^^^ help: a function with a similar name exists: `build_jk`
+   |
+  ::: src/scf/jk.rs:11:1
+   |
+11 | / pub fn build_jk(
+12 | |     shells: &[Shell],
+13 | |     shell_centers: &[[f64; 3]],
+14 | |     density: &Vec<Vec<f64>>,
+...  |
+83 | |     (j, k)
+84 | | }
+   | |_- similarly named function `build_jk` defined here
+
+error[E0308]: arguments to this function are incorrect
+   --> src/scf/uhf.rs:63:21
+    |
+ 63 |         let err_a = diis_error(&f_alpha, &p_alpha, &s);
+    |                     ^^^^^^^^^^
+    |
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+   --> src/scf/uhf.rs:63:42
+    |
+ 63 |         let err_a = diis_error(&f_alpha, &p_alpha, &s);
+    |                                          ^^^^^^^^
+    = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+               found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+   --> src/scf/uhf.rs:63:52
+    |
+ 63 |         let err_a = diis_error(&f_alpha, &p_alpha, &s);
+    |                                                    ^^
+    = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+               found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+   --> src/scf/utils.rs:141:8
+    |
+141 | pub fn diis_error(
+    |        ^^^^^^^^^^
+142 |     fock: &DMatrix<f64>,
+143 |     density: &DMatrix<f64>,
+    |     ----------------------
+144 |     overlap: &DMatrix<f64>,
+    |     ----------------------
+
+error[E0308]: arguments to this function are incorrect
+   --> src/scf/uhf.rs:64:21
+    |
+ 64 |         let err_b = diis_error(&f_beta, &p_beta, &s);
+    |                     ^^^^^^^^^^
+    |
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+   --> src/scf/uhf.rs:64:41
+    |
+ 64 |         let err_b = diis_error(&f_beta, &p_beta, &s);
+    |                                         ^^^^^^^
+    = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+               found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+   --> src/scf/uhf.rs:64:50
+    |
+ 64 |         let err_b = diis_error(&f_beta, &p_beta, &s);
+    |                                                  ^^
+    = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+               found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+   --> src/scf/utils.rs:141:8
+    |
+141 | pub fn diis_error(
+    |        ^^^^^^^^^^
+142 |     fock: &DMatrix<f64>,
+143 |     density: &DMatrix<f64>,
+    |     ----------------------
+144 |     overlap: &DMatrix<f64>,
+    |     ----------------------
+
+error[E0308]: mismatched types
+  --> src/scf/uhf.rs:66:38
+   |
+66 |         diis_a.push(f_alpha.clone(), err_a);
+   |                ----                  ^^^^^ expected `Vec<Vec<f64>>`, found `Matrix<f64, Dyn, Dyn, ...>`
+   |                |
+   |                arguments to this method are incorrect
+   |
+   = note: expected struct `std::vec::Vec<std::vec::Vec<f64>>`
+              found struct `nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+note: method defined here
+  --> src/scf/diis.rs:21:12
+   |
+21 |     pub fn push(&mut self, fock: Vec<Vec<f64>>, error: Vec<Vec<f64>>) {
+   |            ^^^^                                 --------------------
+
+error[E0308]: mismatched types
+  --> src/scf/uhf.rs:67:37
+   |
+67 |         diis_b.push(f_beta.clone(), err_b);
+   |                ----                 ^^^^^ expected `Vec<Vec<f64>>`, found `Matrix<f64, Dyn, Dyn, ...>`
+   |                |
+   |                arguments to this method are incorrect
+   |
+   = note: expected struct `std::vec::Vec<std::vec::Vec<f64>>`
+              found struct `nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+note: method defined here
+  --> src/scf/diis.rs:21:12
+   |
+21 |     pub fn push(&mut self, fock: Vec<Vec<f64>>, error: Vec<Vec<f64>>) {
+   |            ^^^^                                 --------------------
+
+error[E0308]: arguments to this function are incorrect
+   --> src/scf/uhf.rs:73:24
+    |
+ 73 |         let (c_a, _) = solve_roothaan(&f_alpha, &s);
+    |                        ^^^^^^^^^^^^^^
+    |
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+   --> src/scf/uhf.rs:73:39
+    |
+ 73 |         let (c_a, _) = solve_roothaan(&f_alpha, &s);
+    |                                       ^^^^^^^^
+    = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+               found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+   --> src/scf/uhf.rs:73:49
+    |
+ 73 |         let (c_a, _) = solve_roothaan(&f_alpha, &s);
+    |                                                 ^^
+    = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+               found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+   --> src/scf/utils.rs:112:8
+    |
+112 | pub fn solve_roothaan(
+    |        ^^^^^^^^^^^^^^
+113 |     fock: &DMatrix<f64>,
+    |     -------------------
+114 |     overlap: &DMatrix<f64>,
+    |     ----------------------
+
+error[E0308]: arguments to this function are incorrect
+   --> src/scf/uhf.rs:74:24
+    |
+ 74 |         let (c_b, _) = solve_roothaan(&f_beta, &s);
+    |                        ^^^^^^^^^^^^^^
+    |
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+   --> src/scf/uhf.rs:74:39
+    |
+ 74 |         let (c_b, _) = solve_roothaan(&f_beta, &s);
+    |                                       ^^^^^^^
+    = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+               found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+   --> src/scf/uhf.rs:74:48
+    |
+ 74 |         let (c_b, _) = solve_roothaan(&f_beta, &s);
+    |                                                ^^
+    = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+               found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+   --> src/scf/utils.rs:112:8
+    |
+112 | pub fn solve_roothaan(
+    |        ^^^^^^^^^^^^^^
+113 |     fock: &DMatrix<f64>,
+    |     -------------------
+114 |     overlap: &DMatrix<f64>,
+    |     ----------------------
+
+error[E0308]: mismatched types
+  --> src/scf/uhf.rs:77:46
+   |
+77 |         let p_alpha_new = build_spin_density(&c_a, n_alpha);
+   |                           ------------------ ^^^^ expected `&Vec<Vec<f64>>`, found `&Matrix<f64, Dyn, Dyn, ...>`
+   |                           |
+   |                           arguments to this function are incorrect
+   |
+   = note: expected reference `&std::vec::Vec<std::vec::Vec<f64>>`
+              found reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+note: function defined here
+  --> src/scf/density.rs:38:8
+   |
+38 | pub fn build_spin_density(
+   |        ^^^^^^^^^^^^^^^^^^
+39 |     coeff: &Vec<Vec<f64>>,
+   |     ---------------------
+
+error[E0308]: mismatched types
+  --> src/scf/uhf.rs:78:46
+   |
+78 |         let p_beta_new  = build_spin_density(&c_b, n_beta);
+   |                           ------------------ ^^^^ expected `&Vec<Vec<f64>>`, found `&Matrix<f64, Dyn, Dyn, ...>`
+   |                           |
+   |                           arguments to this function are incorrect
+   |
+   = note: expected reference `&std::vec::Vec<std::vec::Vec<f64>>`
+              found reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+note: function defined here
+  --> src/scf/density.rs:38:8
+   |
+38 | pub fn build_spin_density(
+   |        ^^^^^^^^^^^^^^^^^^
+39 |     coeff: &Vec<Vec<f64>>,
+   |     ---------------------
+
+error[E0425]: cannot find function `uhf_energy` in this scope
+  --> src/scf/uhf.rs:81:17
+   |
+81 |         let e = uhf_energy(&p_alpha_new, &p_beta_new, &hcore, &j, &k_alpha, &k_beta);
+   |                 ^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `rms_diff` in this scope
+  --> src/scf/uhf.rs:84:18
+   |
+84 |         let dP = rms_diff(&p_alpha, &p_alpha_new)
+   |                  ^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `rms_diff` in this scope
+  --> src/scf/uhf.rs:85:18
+   |
+85 |                + rms_diff(&p_beta,  &p_beta_new);
+   |                  ^^^^^^^^ not found in this scope
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/scf/udft.rs:26:46
+   |
+26 |     let nao: usize = shells.iter().map(|s| s.orbitals.len()).sum();
+   |                                              ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0308]: mismatched types
+  --> src/scf/udft.rs:29:62
+   |
+29 |     let s = build_one_electron_matrix(shells, shell_centers, overlap_shell_shell);
+   |             -------------------------                        ^^^^^^^^^^^^^^^^^^^ expected `&[Atom]`, found fn item
+   |             |
+   |             arguments to this function are incorrect
+   |
+   = note: expected reference `&[system::atom::Atom]`
+                found fn item `for<'a, 'b> fn(&'a basis::shell::Shell, &'b basis::shell::Shell) -> std::vec::Vec<std::vec::Vec<f64>> {integrals::overlap_contracted::overlap_shell_shell}`
+note: function defined here
+  --> src/scf/utils.rs:32:8
+   |
+32 | pub fn build_one_electron_matrix(
+   |        ^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+35 |     atoms: &[Atom],
+   |     --------------
+
+error[E0308]: mismatched types
+  --> src/scf/udft.rs:30:62
+   |
+30 |     let t = build_one_electron_matrix(shells, shell_centers, kinetic_shell_shell);
+   |             -------------------------                        ^^^^^^^^^^^^^^^^^^^ expected `&[Atom]`, found fn item
+   |             |
+   |             arguments to this function are incorrect
+   |
+   = note: expected reference `&[system::atom::Atom]`
+                found fn item `for<'a, 'b> fn(&'a basis::shell::Shell, &'b basis::shell::Shell) -> std::vec::Vec<std::vec::Vec<f64>> {integrals::kinetic::kinetic_shell_shell}`
+note: function defined here
+  --> src/scf/utils.rs:32:8
+   |
+32 | pub fn build_one_electron_matrix(
+   |        ^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+35 |     atoms: &[Atom],
+   |     --------------
+
+error[E0061]: this function takes 3 arguments but 5 arguments were supplied
+  --> src/scf/udft.rs:32:9
+   |
+32 |         nuclear_attraction_shell_shell(a, ca, b, cb, atoms)
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^           --  ----- unexpected argument #5 of type `&[system::atom::Atom]`
+   |                                                  |
+   |                                                  unexpected argument #4
+   |
+note: function defined here
+  --> src/integrals/nuclear_attraction.rs:85:8
+   |
+85 | pub fn nuclear_attraction_shell_shell(
+   |        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: remove the extra arguments
+   |
+32 -         nuclear_attraction_shell_shell(a, ca, b, cb, atoms)
+32 +         nuclear_attraction_shell_shell(a, ca, b)
+   |
+
+error[E0308]: mismatched types
+  --> src/scf/udft.rs:31:62
+   |
+31 |       let v = build_one_electron_matrix(shells, shell_centers, |a, ca, b, cb| {
+   |  _____________-------------------------________________________^
+   | |             |
+   | |             arguments to this function are incorrect
+32 | |         nuclear_attraction_shell_shell(a, ca, b, cb, atoms)
+33 | |     });
+   | |_____^ expected `&[Atom]`, found closure
+   |
+   = note: expected reference `&[system::atom::Atom]`
+                found closure `{closure@src/scf/udft.rs:31:62: 31:76}`
+note: function defined here
+  --> src/scf/utils.rs:32:8
+   |
+32 | pub fn build_one_electron_matrix(
+   |        ^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+35 |     atoms: &[Atom],
+   |     --------------
+
+error[E0308]: arguments to this function are incorrect
+  --> src/scf/udft.rs:53:21
+   |
+53 |         let p_tot = add(&p_alpha, &p_beta);
+   |                     ^^^
+   |
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+  --> src/scf/udft.rs:53:25
+   |
+53 |         let p_tot = add(&p_alpha, &p_beta);
+   |                         ^^^^^^^^
+   = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+              found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+  --> src/scf/udft.rs:53:35
+   |
+53 |         let p_tot = add(&p_alpha, &p_beta);
+   |                                   ^^^^^^^
+   = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+              found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+  --> src/scf/utils.rs:19:8
+   |
+19 | pub fn add(a: &DMatrix<f64>, b: &DMatrix<f64>) -> DMatrix<f64> {
+   |        ^^^ ----------------  ----------------
+
+error[E0308]: mismatched types
+  --> src/scf/udft.rs:55:54
+   |
+55 |         let (j, _) = build_jk(shells, shell_centers, &p_tot);
+   |                      --------                        ^^^^^^ expected `&Vec<Vec<f64>>`, found `&Matrix<f64, Dyn, Dyn, ...>`
+   |                      |
+   |                      arguments to this function are incorrect
+   |
+   = note: expected reference `&std::vec::Vec<std::vec::Vec<f64>>`
+              found reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+note: function defined here
+  --> src/scf/jk.rs:11:8
+   |
+11 | pub fn build_jk(
+   |        ^^^^^^^^
+...
+14 |     density: &Vec<Vec<f64>>,
+   |     -----------------------
+
+error[E0061]: this function takes 3 arguments but 4 arguments were supplied
+  --> src/scf/udft.rs:59:23
+   |
+59 |         let mut f_a = build_fock_scaled(&hcore, &j, &k_a, hf_frac);
+   |                       ^^^^^^^^^^^^^^^^^                   ------- unexpected argument #4 of type `f64`
+   |
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+  --> src/scf/udft.rs:59:49
+   |
+59 |         let mut f_a = build_fock_scaled(&hcore, &j, &k_a, hf_frac);
+   |                                                 ^^
+   = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+              found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+  --> src/scf/udft.rs:59:53
+   |
+59 |         let mut f_a = build_fock_scaled(&hcore, &j, &k_a, hf_frac);
+   |                                                     ^^^^
+   = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+              found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+  --> src/scf/utils.rs:76:8
+   |
+76 | pub fn build_fock_scaled(
+   |        ^^^^^^^^^^^^^^^^^
+77 |     hcore: &DMatrix<f64>,
+78 |     j: &DMatrix<f64>,
+   |     ----------------
+79 |     k: &DMatrix<f64>,
+   |     ----------------
+help: remove the extra argument
+   |
+59 -         let mut f_a = build_fock_scaled(&hcore, &j, &k_a, hf_frac);
+59 +         let mut f_a = build_fock_scaled(&hcore, /* &nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>> */, /* &nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>> */);
+   |
+
+error[E0061]: this function takes 3 arguments but 4 arguments were supplied
+  --> src/scf/udft.rs:60:23
+   |
+60 |         let mut f_b = build_fock_scaled(&hcore, &j, &k_b, hf_frac);
+   |                       ^^^^^^^^^^^^^^^^^                   ------- unexpected argument #4 of type `f64`
+   |
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+  --> src/scf/udft.rs:60:49
+   |
+60 |         let mut f_b = build_fock_scaled(&hcore, &j, &k_b, hf_frac);
+   |                                                 ^^
+   = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+              found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+  --> src/scf/udft.rs:60:53
+   |
+60 |         let mut f_b = build_fock_scaled(&hcore, &j, &k_b, hf_frac);
+   |                                                     ^^^^
+   = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+              found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+  --> src/scf/utils.rs:76:8
+   |
+76 | pub fn build_fock_scaled(
+   |        ^^^^^^^^^^^^^^^^^
+77 |     hcore: &DMatrix<f64>,
+78 |     j: &DMatrix<f64>,
+   |     ----------------
+79 |     k: &DMatrix<f64>,
+   |     ----------------
+help: remove the extra argument
+   |
+60 -         let mut f_b = build_fock_scaled(&hcore, &j, &k_b, hf_frac);
+60 +         let mut f_b = build_fock_scaled(&hcore, /* &nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>> */, /* &nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>> */);
+   |
+
+error[E0061]: this function takes 10 arguments but 5 arguments were supplied
+   --> src/scf/udft.rs:63:13
+    |
+ 63 |             build_vxc_udft(shells, shell_centers, &p_alpha, &p_beta, xc);
+    |             ^^^^^^^^^^^^^^---------------------------------------------- multiple arguments are missing
+    |
+note: function defined here
+   --> src/dft/vxc.rs:193:8
+    |
+193 | pub fn build_vxc_udft(
+    |        ^^^^^^^^^^^^^^
+...
+198 |     coeff_a: Option<&Vec<Vec<f64>>>,
+    |     -------------------------------
+199 |     coeff_b: Option<&Vec<Vec<f64>>>,
+    |     -------------------------------
+200 |     n_occ_a: Option<usize>,
+    |     ----------------------
+201 |     n_occ_b: Option<usize>,
+    |     ----------------------
+202 |     atoms: &[Atom],
+    |     --------------
+help: provide the arguments
+    |
+ 63 |             build_vxc_udft(shells, shell_centers, &p_alpha, &p_beta, /* std::option::Option<&std::vec::Vec<std::vec::Vec<f64>>> */, /* std::option::Option<&std::vec::Vec<std::vec::Vec<f64>>> */, /* std::option::Option<usize> */, /* std::option::Option<usize> */, /* &[system::atom::Atom] */, xc);
+    |                                                                      ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+error[E0308]: mismatched types
+  --> src/scf/udft.rs:65:31
+   |
+65 |         add_inplace(&mut f_a, &vxa);
+   |         -----------           ^^^^ expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+   |         |
+   |         arguments to this function are incorrect
+   |
+   = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+              found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+  --> src/scf/utils.rs:23:8
+   |
+23 | pub fn add_inplace(a: &mut DMatrix<f64>, b: &DMatrix<f64>) {
+   |        ^^^^^^^^^^^                       ----------------
+
+error[E0308]: mismatched types
+  --> src/scf/udft.rs:66:31
+   |
+66 |         add_inplace(&mut f_b, &vxb);
+   |         -----------           ^^^^ expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+   |         |
+   |         arguments to this function are incorrect
+   |
+   = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+              found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+  --> src/scf/utils.rs:23:8
+   |
+23 | pub fn add_inplace(a: &mut DMatrix<f64>, b: &DMatrix<f64>) {
+   |        ^^^^^^^^^^^                       ----------------
+
+error[E0308]: mismatched types
+   --> src/scf/udft.rs:70:38
+    |
+ 70 |         let err_a = diis_error(&f_a, &p_alpha, &s);
+    |                     ----------       ^^^^^^^^ expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+    |                     |
+    |                     arguments to this function are incorrect
+    |
+    = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+               found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+   --> src/scf/utils.rs:141:8
+    |
+141 | pub fn diis_error(
+    |        ^^^^^^^^^^
+142 |     fock: &DMatrix<f64>,
+143 |     density: &DMatrix<f64>,
+    |     ----------------------
+
+error[E0308]: mismatched types
+   --> src/scf/udft.rs:71:38
+    |
+ 71 |         let err_b = diis_error(&f_b, &p_beta, &s);
+    |                     ----------       ^^^^^^^ expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+    |                     |
+    |                     arguments to this function are incorrect
+    |
+    = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+               found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+   --> src/scf/utils.rs:141:8
+    |
+141 | pub fn diis_error(
+    |        ^^^^^^^^^^
+142 |     fock: &DMatrix<f64>,
+143 |     density: &DMatrix<f64>,
+    |     ----------------------
+
+error[E0308]: arguments to this method are incorrect
+  --> src/scf/udft.rs:73:16
+   |
+73 |         diis_a.push(f_a.clone(), err_a);
+   |                ^^^^
+   |
+note: expected `Vec<Vec<f64>>`, found `Matrix<f64, Dyn, Dyn, ...>`
+  --> src/scf/udft.rs:73:21
+   |
+73 |         diis_a.push(f_a.clone(), err_a);
+   |                     ^^^^^^^^^^^
+   = note: expected struct `std::vec::Vec<std::vec::Vec<f64>>`
+              found struct `nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+note: expected `Vec<Vec<f64>>`, found `Matrix<f64, Dyn, Dyn, ...>`
+  --> src/scf/udft.rs:73:34
+   |
+73 |         diis_a.push(f_a.clone(), err_a);
+   |                                  ^^^^^
+   = note: expected struct `std::vec::Vec<std::vec::Vec<f64>>`
+              found struct `nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+note: method defined here
+  --> src/scf/diis.rs:21:12
+   |
+21 |     pub fn push(&mut self, fock: Vec<Vec<f64>>, error: Vec<Vec<f64>>) {
+   |            ^^^^            -------------------  --------------------
+
+error[E0308]: arguments to this method are incorrect
+  --> src/scf/udft.rs:74:16
+   |
+74 |         diis_b.push(f_b.clone(), err_b);
+   |                ^^^^
+   |
+note: expected `Vec<Vec<f64>>`, found `Matrix<f64, Dyn, Dyn, ...>`
+  --> src/scf/udft.rs:74:21
+   |
+74 |         diis_b.push(f_b.clone(), err_b);
+   |                     ^^^^^^^^^^^
+   = note: expected struct `std::vec::Vec<std::vec::Vec<f64>>`
+              found struct `nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+note: expected `Vec<Vec<f64>>`, found `Matrix<f64, Dyn, Dyn, ...>`
+  --> src/scf/udft.rs:74:34
+   |
+74 |         diis_b.push(f_b.clone(), err_b);
+   |                                  ^^^^^
+   = note: expected struct `std::vec::Vec<std::vec::Vec<f64>>`
+              found struct `nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+note: method defined here
+  --> src/scf/diis.rs:21:12
+   |
+21 |     pub fn push(&mut self, fock: Vec<Vec<f64>>, error: Vec<Vec<f64>>) {
+   |            ^^^^            -------------------  --------------------
+
+error[E0308]: mismatched types
+  --> src/scf/udft.rs:76:50
+   |
+76 |         let f_a = diis_a.extrapolate().unwrap_or(f_a);
+   |                                        --------- ^^^ expected `Vec<Vec<f64>>`, found `Matrix<f64, Dyn, Dyn, ...>`
+   |                                        |
+   |                                        arguments to this method are incorrect
+   |
+   = note: expected struct `std::vec::Vec<std::vec::Vec<f64>>`
+              found struct `nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+help: the return type of this call is `nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>` due to the type of the argument passed
+  --> src/scf/udft.rs:76:19
+   |
+76 |         let f_a = diis_a.extrapolate().unwrap_or(f_a);
+   |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^---^
+   |                                                  |
+   |                                                  this argument influences the return type of `unwrap_or`
+note: method defined here
+  --> /usr/src/debug/rust/rustc-1.92.0-src/library/core/src/option.rs:1037:18
+
+error[E0308]: mismatched types
+  --> src/scf/udft.rs:77:50
+   |
+77 |         let f_b = diis_b.extrapolate().unwrap_or(f_b);
+   |                                        --------- ^^^ expected `Vec<Vec<f64>>`, found `Matrix<f64, Dyn, Dyn, ...>`
+   |                                        |
+   |                                        arguments to this method are incorrect
+   |
+   = note: expected struct `std::vec::Vec<std::vec::Vec<f64>>`
+              found struct `nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+help: the return type of this call is `nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>` due to the type of the argument passed
+  --> src/scf/udft.rs:77:19
+   |
+77 |         let f_b = diis_b.extrapolate().unwrap_or(f_b);
+   |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^---^
+   |                                                  |
+   |                                                  this argument influences the return type of `unwrap_or`
+note: method defined here
+  --> /usr/src/debug/rust/rustc-1.92.0-src/library/core/src/option.rs:1037:18
+
+error[E0308]: mismatched types
+   --> src/scf/udft.rs:79:39
+    |
+ 79 |         let (c_a, _) = solve_roothaan(&f_a, &s);
+    |                        -------------- ^^^^ expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+    |                        |
+    |                        arguments to this function are incorrect
+    |
+    = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+               found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+   --> src/scf/utils.rs:112:8
+    |
+112 | pub fn solve_roothaan(
+    |        ^^^^^^^^^^^^^^
+113 |     fock: &DMatrix<f64>,
+    |     -------------------
+
+error[E0308]: mismatched types
+   --> src/scf/udft.rs:80:39
+    |
+ 80 |         let (c_b, _) = solve_roothaan(&f_b, &s);
+    |                        -------------- ^^^^ expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+    |                        |
+    |                        arguments to this function are incorrect
+    |
+    = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+               found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+   --> src/scf/utils.rs:112:8
+    |
+112 | pub fn solve_roothaan(
+    |        ^^^^^^^^^^^^^^
+113 |     fock: &DMatrix<f64>,
+    |     -------------------
+
+error[E0308]: mismatched types
+  --> src/scf/udft.rs:82:46
+   |
+82 |         let p_alpha_new = build_spin_density(&c_a, n_alpha);
+   |                           ------------------ ^^^^ expected `&Vec<Vec<f64>>`, found `&Matrix<f64, Dyn, Dyn, ...>`
+   |                           |
+   |                           arguments to this function are incorrect
+   |
+   = note: expected reference `&std::vec::Vec<std::vec::Vec<f64>>`
+              found reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+note: function defined here
+  --> src/scf/density.rs:38:8
+   |
+38 | pub fn build_spin_density(
+   |        ^^^^^^^^^^^^^^^^^^
+39 |     coeff: &Vec<Vec<f64>>,
+   |     ---------------------
+
+error[E0308]: mismatched types
+  --> src/scf/udft.rs:83:45
+   |
+83 |         let p_beta_new = build_spin_density(&c_b, n_beta);
+   |                          ------------------ ^^^^ expected `&Vec<Vec<f64>>`, found `&Matrix<f64, Dyn, Dyn, ...>`
+   |                          |
+   |                          arguments to this function are incorrect
+   |
+   = note: expected reference `&std::vec::Vec<std::vec::Vec<f64>>`
+              found reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+note: function defined here
+  --> src/scf/density.rs:38:8
+   |
+38 | pub fn build_spin_density(
+   |        ^^^^^^^^^^^^^^^^^^
+39 |     coeff: &Vec<Vec<f64>>,
+   |     ---------------------
+
+error[E0061]: this function takes 3 arguments but 5 arguments were supplied
+  --> src/scf/udft.rs:86:13
+   |
+86 |             electronic_energy_scaled(&p_tot, &hcore, &j, &k_a, hf_frac)
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^                     ----  ------- unexpected argument #5 of type `f64`
+   |                                                          |
+   |                                                          unexpected argument #4 of type `&std::vec::Vec<std::vec::Vec<f64>>`
+   |
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+  --> src/scf/udft.rs:86:54
+   |
+86 |             electronic_energy_scaled(&p_tot, &hcore, &j, &k_a, hf_frac)
+   |                                                      ^^
+   = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+              found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+  --> src/scf/utils.rs:89:8
+   |
+89 | pub fn electronic_energy_scaled(
+   |        ^^^^^^^^^^^^^^^^^^^^^^^^
+...
+92 |     fock: &DMatrix<f64>,
+   |     -------------------
+help: remove the extra arguments
+   |
+86 -             electronic_energy_scaled(&p_tot, &hcore, &j, &k_a, hf_frac)
+86 +             electronic_energy_scaled(&p_tot, &hcore, /* &nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>> */)
+   |
+
+error[E0061]: this function takes 3 arguments but 5 arguments were supplied
+  --> src/scf/udft.rs:87:13
+   |
+87 |           + electronic_energy_scaled(&p_tot, &hcore, &j, &k_b, hf_frac);
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^                     ----  ------- unexpected argument #5 of type `f64`
+   |                                                          |
+   |                                                          unexpected argument #4 of type `&std::vec::Vec<std::vec::Vec<f64>>`
+   |
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+  --> src/scf/udft.rs:87:54
+   |
+87 |           + electronic_energy_scaled(&p_tot, &hcore, &j, &k_b, hf_frac);
+   |                                                      ^^
+   = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+              found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+  --> src/scf/utils.rs:89:8
+   |
+89 | pub fn electronic_energy_scaled(
+   |        ^^^^^^^^^^^^^^^^^^^^^^^^
+...
+92 |     fock: &DMatrix<f64>,
+   |     -------------------
+help: remove the extra arguments
+   |
+87 -           + electronic_energy_scaled(&p_tot, &hcore, &j, &k_b, hf_frac);
+87 +           + electronic_energy_scaled(&p_tot, &hcore, /* &nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>> */);
+   |
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/scf/utils.rs:38:70
+   |
+38 |     let nao = shells.last().unwrap().offset + shells.last().unwrap().orbitals.len();
+   |                                                                      ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0599]: no method named `kinetic` found for reference `&basis::shell::Shell` in the current scope
+  --> src/scf/utils.rs:46:24
+   |
+46 |             let t = si.kinetic(sj, *ci, *cj);
+   |                        ^^^^^^^ method not found in `&basis::shell::Shell`
+
+error[E0599]: no method named `nuclear_attraction` found for reference `&basis::shell::Shell` in the current scope
+  --> src/scf/utils.rs:47:24
+   |
+47 |             let v = si.nuclear_attraction(sj, *ci, *cj, atoms);
+   |                        ^^^^^^^^^^^^^^^^^^ method not found in `&basis::shell::Shell`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/scf/utils.rs:49:29
+   |
+49 |             for mu in 0..si.orbitals.len() {
+   |                             ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/scf/utils.rs:50:33
+   |
+50 |                 for nu in 0..sj.orbitals.len() {
+   |                                 ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/scf/guess.rs:15:39
+   |
+15 |     let nao = shells.iter().map(|s| s.orbitals.len()).sum::<usize>();
+   |                                       ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0061]: this function takes 2 arguments but 4 arguments were supplied
+  --> src/scf/guess.rs:19:9
+   |
+19 |         overlap_shell_shell(a, ca, b, cb)
+   |         ^^^^^^^^^^^^^^^^^^^    --     -- unexpected argument #4 of type `[f64; 3]`
+   |                                |
+   |                                unexpected argument #2 of type `[f64; 3]`
+   |
+note: function defined here
+  --> src/integrals/overlap_contracted.rs:28:8
+   |
+28 | pub fn overlap_shell_shell(
+   |        ^^^^^^^^^^^^^^^^^^^
+help: remove the extra arguments
+   |
+19 -         overlap_shell_shell(a, ca, b, cb)
+19 +         overlap_shell_shell(a, b)
+   |
+
+error[E0061]: this function takes 2 arguments but 4 arguments were supplied
+  --> src/scf/guess.rs:22:9
+   |
+22 |         kinetic_shell_shell(a, ca, b, cb)
+   |         ^^^^^^^^^^^^^^^^^^^    --     -- unexpected argument #4 of type `[f64; 3]`
+   |                                |
+   |                                unexpected argument #2 of type `[f64; 3]`
+   |
+note: function defined here
+  --> src/integrals/kinetic.rs:75:8
+   |
+75 | pub fn kinetic_shell_shell(
+   |        ^^^^^^^^^^^^^^^^^^^
+help: remove the extra arguments
+   |
+22 -         kinetic_shell_shell(a, ca, b, cb)
+22 +         kinetic_shell_shell(a, b)
+   |
+
+error[E0061]: this function takes 3 arguments but 5 arguments were supplied
+  --> src/scf/guess.rs:25:9
+   |
+25 |         nuclear_attraction_shell_shell(a, ca, b, cb, atoms)
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    --     -- unexpected argument #4 of type `[f64; 3]`
+   |                                           |
+   |                                           unexpected argument #2 of type `[f64; 3]`
+   |
+note: function defined here
+  --> src/integrals/nuclear_attraction.rs:85:8
+   |
+85 | pub fn nuclear_attraction_shell_shell(
+   |        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+help: remove the extra arguments
+   |
+25 -         nuclear_attraction_shell_shell(a, ca, b, cb, atoms)
+25 +         nuclear_attraction_shell_shell(a, b, atoms)
+   |
+
+error[E0308]: arguments to this function are incorrect
+   --> src/scf/guess.rs:31:22
+    |
+ 31 |     let (coeff, _) = solve_roothaan(&hcore, &s);
+    |                      ^^^^^^^^^^^^^^
+    |
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+   --> src/scf/guess.rs:31:37
+    |
+ 31 |     let (coeff, _) = solve_roothaan(&hcore, &s);
+    |                                     ^^^^^^
+    = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+               found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+   --> src/scf/guess.rs:31:45
+    |
+ 31 |     let (coeff, _) = solve_roothaan(&hcore, &s);
+    |                                             ^^
+    = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+               found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+   --> src/scf/utils.rs:112:8
+    |
+112 | pub fn solve_roothaan(
+    |        ^^^^^^^^^^^^^^
+113 |     fock: &DMatrix<f64>,
+    |     -------------------
+114 |     overlap: &DMatrix<f64>,
+    |     ----------------------
+
+error[E0308]: mismatched types
+  --> src/scf/guess.rs:34:19
+   |
+34 |     build_density(&coeff, n_electrons)
+   |     ------------- ^^^^^^ expected `Matrix<f64, Dyn, Dyn, ...>`, found `&Matrix<f64, Dyn, Dyn, ...>`
+   |     |
+   |     arguments to this function are incorrect
+   |
+   = note: expected struct `nalgebra::Matrix<_, _, _, _>`
+           found reference `&nalgebra::Matrix<_, _, _, _>`
+note: function defined here
+  --> src/scf/density.rs:14:8
+   |
+14 | pub fn build_density(
+   |        ^^^^^^^^^^^^^
+15 |     coeff: DMatrix<f64>,
+   |     -------------------
+help: consider removing the borrow
+   |
+34 -     build_density(&coeff, n_electrons)
+34 +     build_density(coeff, n_electrons)
+   |
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/scf/guess.rs:45:39
+   |
+45 |     let nao = shells.iter().map(|s| s.orbitals.len()).sum::<usize>();
+   |                                       ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/scf/guess.rs:52:19
+   |
+52 |         off += sh.orbitals.len();
+   |                   ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0599]: no method named `grad_kinetic_nuclear` found for reference `&basis::shell::Shell` in the current scope
+  --> src/gradients/one_electron.rs:20:35
+   |
+20 |                 let d_h = shell_i.grad_kinetic_nuclear(
+   |                           --------^^^^^^^^^^^^^^^^^^^^ method not found in `&basis::shell::Shell`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/gradients/one_electron.rs:27:38
+   |
+27 |                 for mu in 0..shell_i.orbitals.len() {
+   |                                      ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/gradients/one_electron.rs:28:42
+   |
+28 |                     for nu in 0..shell_j.orbitals.len() {
+   |                                          ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0599]: no method named `grad_overlap` found for reference `&basis::shell::Shell` in the current scope
+  --> src/gradients/overlap_pulay.rs:14:30
+   |
+14 |             let dS = shell_i.grad_overlap(&shell_j);
+   |                              ^^^^^^^^^^^^ method not found in `&basis::shell::Shell`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/gradients/overlap_pulay.rs:16:34
+   |
+16 |             for mu in 0..shell_i.orbitals.len() {
+   |                                  ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/gradients/overlap_pulay.rs:17:38
+   |
+17 |                 for nu in 0..shell_j.orbitals.len() {
+   |                                      ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0599]: no method named `as_ref` found for enum `dft::vxc::XcMethod` in the current scope
+  --> src/gradients/total.rs:74:26
+   |
+74 |             match method.as_ref() {
+   |                          ^^^^^^ method not found in `dft::vxc::XcMethod`
+   |
+  ::: src/dft/vxc.rs:43:1
+   |
+43 | pub enum XcMethod {
+   | ----------------- method `as_ref` not found for this enum
+   |
+   = help: items from traits can only be used if the trait is implemented and in scope
+   = note: the following trait defines an item `as_ref`, perhaps you need to implement it:
+           candidate #1: `std::convert::AsRef`
+
+error[E0308]: mismatched types
+  --> src/gradients/total.rs:76:44
+   |
+74 |             match method.as_ref() {
+   |                   --------------- this expression has type `{type error}`
+75 |                 XcMethod::LDA | XcMethod::GGA
+76 |                 | XcMethod::Hybrid { base: XcMethod::LDA, .. }
+   |                                            ^^^^^^^^^^^^^ expected `Box<XcMethod>`, found `XcMethod`
+   |
+  ::: src/dft/vxc.rs:44:5
+   |
+44 |     LDA,
+   |     --- unit variant defined here
+   |
+   = note: expected struct `std::boxed::Box<dft::vxc::XcMethod>`
+                found enum `dft::vxc::XcMethod`
+
+error[E0308]: mismatched types
+  --> src/gradients/total.rs:77:44
+   |
+74 |             match method.as_ref() {
+   |                   --------------- this expression has type `{type error}`
+...
+77 |                 | XcMethod::Hybrid { base: XcMethod::GGA, .. } => {
+   |                                            ^^^^^^^^^^^^^ expected `Box<XcMethod>`, found `XcMethod`
+   |
+  ::: src/dft/vxc.rs:45:5
+   |
+45 |     GGA,
+   |     --- unit variant defined here
+   |
+   = note: expected struct `std::boxed::Box<dft::vxc::XcMethod>`
+                found enum `dft::vxc::XcMethod`
+
+error[E0308]: mismatched types
+  --> src/gradients/total.rs:95:44
+   |
+74 |             match method.as_ref() {
+   |                   --------------- this expression has type `{type error}`
+...
+95 |                 | XcMethod::Hybrid { base: XcMethod::MetaGGA, .. } => {
+   |                                            ^^^^^^^^^^^^^^^^^ expected `Box<XcMethod>`, found `XcMethod`
+   |
+  ::: src/dft/vxc.rs:46:5
+   |
+46 |     MetaGGA,
+   |     ------- unit variant defined here
+   |
+   = note: expected struct `std::boxed::Box<dft::vxc::XcMethod>`
+                found enum `dft::vxc::XcMethod`
+
+error[E0061]: this function takes 7 arguments but 5 arguments were supplied
+  --> src/gradients/total.rs:79:31
+   |
+79 |                       let gxc = grad_xc_lda_gga(
+   |  _______________________________^^^^^^^^^^^^^^^-
+80 | |                         shells,
+81 | |                         shell_centers,
+82 | |                         p,
+83 | |                         atoms,
+84 | |                         method,
+   | |                         ------ expected `usize`, found `XcMethod`
+85 | |                     );
+   | |_____________________- two arguments of type `usize` and `bool` are missing
+   |
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+  --> src/gradients/total.rs:82:25
+   |
+82 |                         p,
+   |                         ^
+   = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+              found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+  --> src/gradients/dft_xc.rs:23:8
+   |
+23 | pub fn grad_xc_lda_gga(
+   |        ^^^^^^^^^^^^^^^
+...
+26 |     density: &DMatrix<f64>,
+   |     ----------------------
+27 |     atoms: &[Atom],
+28 |     atom: usize,
+   |     -----------
+29 |     axis: usize,
+   |     -----------
+30 |     is_gga: bool,
+   |     ------------
+help: provide the arguments
+   |
+79 ~                     let gxc = grad_xc_lda_gga(
+80 +                         shells,
+81 +                         shell_centers,
+82 +                         /* &nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>> */,
+83 +                         atoms,
+84 +                         /* usize */,
+85 +                         /* usize */,
+86 +                         /* bool */,
+87 ~                     );
+   |
+
+error[E0608]: cannot index into a value of type `f64`
+  --> src/gradients/total.rs:89:49
+   |
+89 | ...                   grad[a][k] += gxc[a][k];
+   |                                           ^^^
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/gradients/overlap.rs:21:38
+   |
+21 |             + shells.last().unwrap().orbitals.len();
+   |                                      ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/gradients/overlap.rs:27:21
+   |
+27 |         let ni = si.orbitals.len();
+   |                     ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/gradients/overlap.rs:31:25
+   |
+31 |             let nj = sj.orbitals.len();
+   |                         ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0599]: no method named `first_deriv_overlap` found for reference `&basis::shell::Shell` in the current scope
+  --> src/gradients/overlap.rs:34:20
+   |
+34 |                 si.first_deriv_overlap(sj, *ci, *cj, natoms);
+   |                    ^^^^^^^^^^^^^^^^^^^ method not found in `&basis::shell::Shell`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/gradients/fock.rs:35:21
+   |
+35 |         let ni = si.orbitals.len();
+   |                     ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/gradients/fock.rs:39:25
+   |
+39 |             let nj = sj.orbitals.len();
+   |                         ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0599]: no method named `second_deriv_kinetic` found for reference `&basis::shell::Shell` in the current scope
+  --> src/gradients/fock.rs:42:20
+   |
+42 |                 si.second_deriv_kinetic(sj, *ci, *cj, atoms);
+   |                    ^^^^^^^^^^^^^^^^^^^^ method not found in `&basis::shell::Shell`
+
+error[E0599]: no method named `second_deriv_nuclear_attraction` found for reference `&basis::shell::Shell` in the current scope
+  --> src/gradients/fock.rs:45:20
+   |
+45 |                 si.second_deriv_nuclear_attraction(sj, *ci, *cj, atoms);
+   |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ method not found in `&basis::shell::Shell`
+
+error[E0599]: no method named `first_deriv_eri` found for reference `&basis::shell::Shell` in the current scope
+  --> src/gradients/fock.rs:66:28
+   |
+66 |                         si.first_deriv_eri(sj, sk, sl, atoms.len());
+   |                            ^^^^^^^^^^^^^^^ method not found in `&basis::shell::Shell`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/gradients/fock.rs:68:37
+   |
+68 |                     for mu in 0..si.orbitals.len() {
+   |                                     ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/gradients/fock.rs:69:41
+   |
+69 |                         for nu in 0..sj.orbitals.len() {
+   |                                         ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/gradients/fock.rs:74:45
+   |
+74 | ...                   for la in 0..sk.orbitals.len() {
+   |                                       ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/gradients/fock.rs:75:50
+   |
+75 | ...                   for si2 in 0..sl.orbitals.len() {
+   |                                        ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0599]: no method named `first_deriv_eri` found for reference `&basis::shell::Shell` in the current scope
+   --> src/gradients/fock.rs:100:28
+    |
+100 |                         si.first_deriv_eri(sj, sk, sl, atoms.len());
+    |                            ^^^^^^^^^^^^^^^ method not found in `&basis::shell::Shell`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+   --> src/gradients/fock.rs:102:37
+    |
+102 |                     for mu in 0..si.orbitals.len() {
+    |                                     ^^^^^^^^ unknown field
+    |
+    = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+   --> src/gradients/fock.rs:103:41
+    |
+103 |                         for nu in 0..sj.orbitals.len() {
+    |                                         ^^^^^^^^ unknown field
+    |
+    = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+   --> src/gradients/fock.rs:108:45
+    |
+108 | ...                   for la in 0..sk.orbitals.len() {
+    |                                       ^^^^^^^^ unknown field
+    |
+    = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+   --> src/gradients/fock.rs:109:50
+    |
+109 | ...                   for si2 in 0..sl.orbitals.len() {
+    |                                        ^^^^^^^^ unknown field
+    |
+    = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0425]: cannot find function `build_vxc_derivative` in this scope
+   --> src/gradients/fock.rs:130:13
+    |
+130 |             build_vxc_derivative(
+    |             ^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/gradients/dft_xc.rs:72:33
+   |
+72 |                 for mu in 0..si.orbitals.len() {
+   |                                 ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/gradients/dft_xc.rs:73:37
+   |
+73 |                     let phi_mu = si.orbitals[mu].value(*ci, pt.r);
+   |                                     ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/gradients/dft_xc.rs:74:38
+   |
+74 |                     let dphi_mu = si.orbitals[mu].gradient(*ci, pt.r)[axis];
+   |                                      ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/gradients/dft_xc.rs:76:37
+   |
+76 |                     for nu in 0..sj.orbitals.len() {
+   |                                     ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/gradients/dft_xc.rs:77:41
+   |
+77 |                         let phi_nu = sj.orbitals[nu].value(*cj, pt.r);
+   |                                         ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/gradients/dft_xc.rs:78:42
+   |
+78 |                         let dphi_nu = sj.orbitals[nu].gradient(*cj, pt.r)[axis];
+   |                                          ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0308]: `match` arms have incompatible types
+  --> src/gradients/dft_xc_meta.rs:23:14
+   |
+21 |       let (xc_base, hf_frac) = match method {
+   |  ______________________________-
+22 | |         XcMethod::Hybrid { base, hyb } => (base, hyb.hf_fraction()),
+   | |                                           ------------------------- this is found to be of type `(std::boxed::Box<dft::vxc::XcMethod>, f64)`
+23 | |         m => (m, 0.0),
+   | |              ^^^^^^^^ expected `(Box<XcMethod>, f64)`, found `(XcMethod, {float})`
+24 | |     };
+   | |_____- `match` arms have incompatible types
+   |
+   = note: expected tuple `(std::boxed::Box<dft::vxc::XcMethod>, f64)`
+              found tuple `(dft::vxc::XcMethod, {float})`
+
+error[E0308]: mismatched types
+  --> src/gradients/dft_xc_meta.rs:37:52
+   |
+37 |         let dp = density_at_point(shells, centers, density, r);
+   |                  ----------------                  ^^^^^^^ expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+   |                  |
+   |                  arguments to this function are incorrect
+   |
+   = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+              found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+  --> src/dft/density.rs:28:8
+   |
+28 | pub fn density_at_point(
+   |        ^^^^^^^^^^^^^^^^
+...
+31 |     density: &DMatrix<f64>,
+   |     ----------------------
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/gradients/dft_xc_meta.rs:56:27
+   |
+56 |             for ao in &sh.orbitals {
+   |                           ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0282]: type annotations needed
+  --> src/gradients/dft_xc_meta.rs:57:26
+   |
+57 |                 phi.push(ao.value(*c, r));
+   |                          ^^ cannot infer type
+
+error[E0308]: `match` arms have incompatible types
+  --> src/gradients/dft_xc_spin.rs:27:14
+   |
+25 |       let (xc_base, hf_frac) = match method {
+   |  ______________________________-
+26 | |         XcMethod::Hybrid { base, hyb } => (base, hyb.hf_fraction()),
+   | |                                           ------------------------- this is found to be of type `(std::boxed::Box<dft::vxc::XcMethod>, f64)`
+27 | |         m => (m, 0.0),
+   | |              ^^^^^^^^ expected `(Box<XcMethod>, f64)`, found `(XcMethod, {float})`
+28 | |     };
+   | |_____- `match` arms have incompatible types
+   |
+   = note: expected tuple `(std::boxed::Box<dft::vxc::XcMethod>, f64)`
+              found tuple `(dft::vxc::XcMethod, {float})`
+
+error[E0308]: arguments to this function are incorrect
+  --> src/gradients/dft_xc_spin.rs:45:18
+   |
+45 |         let dp = spin_density_at_point(
+   |                  ^^^^^^^^^^^^^^^^^^^^^
+   |
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+  --> src/gradients/dft_xc_spin.rs:48:13
+   |
+48 |             p_alpha,
+   |             ^^^^^^^
+   = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+              found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+  --> src/gradients/dft_xc_spin.rs:49:13
+   |
+49 |             p_beta,
+   |             ^^^^^^
+   = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+              found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+  --> src/dft/density.rs:78:8
+   |
+78 | pub fn spin_density_at_point(
+   |        ^^^^^^^^^^^^^^^^^^^^^
+...
+81 |     density_alpha: &DMatrix<f64>,
+   |     ----------------------------
+82 |     density_beta: &DMatrix<f64>,
+   |     ---------------------------
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/gradients/dft_xc_spin.rs:63:30
+   |
+63 |             for ao in &shell.orbitals {
+   |                              ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0282]: type annotations needed
+  --> src/gradients/dft_xc_spin.rs:64:26
+   |
+64 |                 phi.push(ao.value(*center, r));
+   |                          ^^ cannot infer type
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/hessian/one_electron.rs:37:21
+   |
+37 |         let ni = si.orbitals.len();
+   |                     ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/hessian/one_electron.rs:41:25
+   |
+41 |             let nj = sj.orbitals.len();
+   |                         ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0599]: no method named `second_deriv_kinetic` found for reference `&basis::shell::Shell` in the current scope
+  --> src/hessian/one_electron.rs:47:26
+   |
+47 |             let d2t = si.second_deriv_kinetic(sj, *ci, *cj, atoms);
+   |                          ^^^^^^^^^^^^^^^^^^^^ method not found in `&basis::shell::Shell`
+
+error[E0599]: no method named `second_deriv_nuclear_attraction` found for reference `&basis::shell::Shell` in the current scope
+  --> src/hessian/one_electron.rs:53:26
+   |
+53 |             let d2v = si.second_deriv_nuclear_attraction(sj, *ci, *cj, atoms);
+   |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ method not found in `&basis::shell::Shell`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/hessian/overlap.rs:43:21
+   |
+43 |         let ni = si.orbitals.len();
+   |                     ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/hessian/overlap.rs:47:25
+   |
+47 |             let nj = sj.orbitals.len();
+   |                         ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0599]: no method named `first_deriv_overlap` found for reference `&basis::shell::Shell` in the current scope
+  --> src/hessian/overlap.rs:54:20
+   |
+54 |                 si.first_deriv_overlap(sj, *ci, *cj, natoms);
+   |                    ^^^^^^^^^^^^^^^^^^^ method not found in `&basis::shell::Shell`
+
+error[E0599]: no method named `second_deriv_overlap` found for reference `&basis::shell::Shell` in the current scope
+  --> src/hessian/overlap.rs:61:20
+   |
+61 |                 si.second_deriv_overlap(sj, *ci, *cj, natoms);
+   |                    ^^^^^^^^^^^^^^^^^^^^ method not found in `&basis::shell::Shell`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/hessian/two_electron.rs:36:25
+   |
+36 |         let nmu = sh_mu.orbitals.len();
+   |                         ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/hessian/two_electron.rs:40:29
+   |
+40 |             let nnu = sh_nu.orbitals.len();
+   |                             ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/hessian/two_electron.rs:44:33
+   |
+44 |                 let nla = sh_la.orbitals.len();
+   |                                 ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/hessian/two_electron.rs:48:37
+   |
+48 |                     let nsi = sh_si.orbitals.len();
+   |                                     ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0599]: no method named `second_deriv_eri` found for reference `&basis::shell::Shell` in the current scope
+  --> src/hessian/two_electron.rs:58:31
+   |
+58 |                         sh_mu.second_deriv_eri(
+   |                         ------^^^^^^^^^^^^^^^^ method not found in `&basis::shell::Shell`
+
+error[E0308]: mismatched types
+  --> src/hessian/xc.rs:81:58
+   |
+81 |         let dp = density_at_point(shells, shell_centers, density, r);
+   |                  ----------------                        ^^^^^^^ expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+   |                  |
+   |                  arguments to this function are incorrect
+   |
+   = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+              found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+  --> src/dft/density.rs:28:8
+   |
+28 | pub fn density_at_point(
+   |        ^^^^^^^^^^^^^^^^
+...
+31 |     density: &DMatrix<f64>,
+   |     ----------------------
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/hessian/xc.rs:91:27
+   |
+91 |             for ao in &sh.orbitals {
+   |                           ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0282]: type annotations needed
+  --> src/hessian/xc.rs:92:26
+   |
+92 |                 phi.push(ao.value(*c, r));
+   |                          ^^ cannot infer type
+
+error[E0599]: no method named `eval_xc_hessian` found for struct `dft::libxc::LibXC` in the current scope
+   --> src/hessian/xc.rs:122:22
+    |
+122 |         let xc2 = fx.eval_xc_hessian(&rho, &sigma, tau);
+    |                      ^^^^^^^^^^^^^^^
+    |
+   ::: src/dft/libxc.rs:103:1
+    |
+103 | pub struct LibXC {
+    | ---------------- method `eval_xc_hessian` not found for this struct
+    |
+help: there is a method `eval_gga_hessian` with a similar name, but with different arguments
+   --> src/dft/libxc.rs:191:5
+    |
+191 | /     pub fn eval_gga_hessian(
+192 | |         &self,
+193 | |         rho: &[f64],
+194 | |         sigma: &[f64],
+195 | |     ) -> XcHessian {
+    | |__________________^
+
+error[E0599]: no method named `eval_xc_hessian` found for struct `dft::libxc::LibXC` in the current scope
+   --> src/hessian/xc.rs:123:22
+    |
+123 |         let cc2 = fc.eval_xc_hessian(&rho, &sigma, tau);
+    |                      ^^^^^^^^^^^^^^^
+    |
+   ::: src/dft/libxc.rs:103:1
+    |
+103 | pub struct LibXC {
+    | ---------------- method `eval_xc_hessian` not found for this struct
+    |
+help: there is a method `eval_gga_hessian` with a similar name, but with different arguments
+   --> src/dft/libxc.rs:191:5
+    |
+191 | /     pub fn eval_gga_hessian(
+192 | |         &self,
+193 | |         rho: &[f64],
+194 | |         sigma: &[f64],
+195 | |     ) -> XcHessian {
+    | |__________________^
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/dft/density.rs:42:25
+   |
+42 |         for mu in 0..si.orbitals.len() {
+   |                         ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/dft/density.rs:43:29
+   |
+43 |             let phi_mu = si.orbitals[mu].value(*ci, r);
+   |                             ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/dft/density.rs:44:30
+   |
+44 |             let grad_mu = si.orbitals[mu].gradient(*ci, r);
+   |                              ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/dft/density.rs:51:33
+   |
+51 |                 for nu in 0..sj.orbitals.len() {
+   |                                 ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/dft/density.rs:52:37
+   |
+52 |                     let phi_nu = sj.orbitals[nu].value(*cj, r);
+   |                                     ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/dft/density.rs:53:38
+   |
+53 |                     let grad_nu = sj.orbitals[nu].gradient(*cj, r);
+   |                                      ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0308]: mismatched types
+   --> src/dft/vxc.rs:110:58
+    |
+110 |         let dp = density_at_point(shells, shell_centers, density, r);
+    |                  ----------------                        ^^^^^^^ expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+    |                  |
+    |                  arguments to this function are incorrect
+    |
+    = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+               found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+   --> src/dft/density.rs:28:8
+    |
+ 28 | pub fn density_at_point(
+    |        ^^^^^^^^^^^^^^^^
+...
+ 31 |     density: &DMatrix<f64>,
+    |     ----------------------
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+   --> src/dft/vxc.rs:120:27
+    |
+120 |             for ao in &sh.orbitals {
+    |                           ^^^^^^^^ unknown field
+    |
+    = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0282]: type annotations needed
+   --> src/dft/vxc.rs:121:26
+    |
+121 |                 phi.push(ao.value(*c, r));
+    |                          ^^ cannot infer type
+
+error[E0599]: no method named `eval_all` found for struct `dft::libxc::LibXC` in the current scope
+   --> src/dft/vxc.rs:142:43
+    |
+142 |         let (eps_x, vrx, vsx, vtx_x) = fx.eval_all(&rho, &sigma, tau);
+    |                                           ^^^^^^^^ method not found in `dft::libxc::LibXC`
+    |
+   ::: src/dft/libxc.rs:103:1
+    |
+103 | pub struct LibXC {
+    | ---------------- method `eval_all` not found for this struct
+
+error[E0599]: no method named `eval_all` found for struct `dft::libxc::LibXC` in the current scope
+   --> src/dft/vxc.rs:143:43
+    |
+143 |         let (eps_c, vrc, vsc, vtx_c) = fc.eval_all(&rho, &sigma, tau);
+    |                                           ^^^^^^^^ method not found in `dft::libxc::LibXC`
+    |
+   ::: src/dft/libxc.rs:103:1
+    |
+103 | pub struct LibXC {
+    | ---------------- method `eval_all` not found for this struct
+
+error[E0308]: arguments to this function are incorrect
+   --> src/dft/vxc.rs:240:18
+    |
+240 |         let dp = spin_density_at_point(
+    |                  ^^^^^^^^^^^^^^^^^^^^^
+    |
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+   --> src/dft/vxc.rs:243:13
+    |
+243 |             p_alpha,
+    |             ^^^^^^^
+    = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+               found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: expected `&Matrix<f64, Dyn, Dyn, ...>`, found `&Vec<Vec<f64>>`
+   --> src/dft/vxc.rs:244:13
+    |
+244 |             p_beta,
+    |             ^^^^^^
+    = note: expected reference `&nalgebra::Matrix<f64, nalgebra::Dyn, nalgebra::Dyn, nalgebra::VecStorage<f64, nalgebra::Dyn, nalgebra::Dyn>>`
+               found reference `&std::vec::Vec<std::vec::Vec<f64>>`
+note: function defined here
+   --> src/dft/density.rs:78:8
+    |
+ 78 | pub fn spin_density_at_point(
+    |        ^^^^^^^^^^^^^^^^^^^^^
+...
+ 81 |     density_alpha: &DMatrix<f64>,
+    |     ----------------------------
+ 82 |     density_beta: &DMatrix<f64>,
+    |     ---------------------------
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+   --> src/dft/vxc.rs:257:27
+    |
+257 |             for ao in &sh.orbitals {
+    |                           ^^^^^^^^ unknown field
+    |
+    = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0282]: type annotations needed
+   --> src/dft/vxc.rs:258:26
+    |
+258 |                 phi.push(ao.value(*c, r));
+    |                          ^^ cannot infer type
+
+error[E0599]: no method named `eval_all_spin` found for struct `dft::libxc::LibXC` in the current scope
+   --> src/dft/vxc.rs:279:43
+    |
+279 |         let (eps_x, vrx, vsx, vtx_x) = fx.eval_all_spin(&rho, &sigma, &tau);
+    |                                           ^^^^^^^^^^^^^ method not found in `dft::libxc::LibXC`
+    |
+   ::: src/dft/libxc.rs:103:1
+    |
+103 | pub struct LibXC {
+    | ---------------- method `eval_all_spin` not found for this struct
+
+error[E0599]: no method named `eval_all_spin` found for struct `dft::libxc::LibXC` in the current scope
+   --> src/dft/vxc.rs:280:43
+    |
+280 |         let (eps_c, vrc, vsc, vtx_c) = fc.eval_all_spin(&rho, &sigma, &tau);
+    |                                           ^^^^^^^^^^^^^ method not found in `dft::libxc::LibXC`
+    |
+   ::: src/dft/libxc.rs:103:1
+    |
+103 | pub struct LibXC {
+    | ---------------- method `eval_all_spin` not found for this struct
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/dft/tau.rs:18:23
+   |
+18 |         for ao in &sh.orbitals {
+   |                       ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0282]: type annotations needed
+  --> src/dft/tau.rs:19:27
+   |
+19 |             grad_phi.push(ao.gradient(*c, r));
+   |                           ^^ cannot infer type
+
+error[E0609]: no field `orbitals` on type `&basis::shell::Shell`
+  --> src/dft/tau.rs:51:23
+   |
+51 |         for ao in &sh.orbitals {
+   |                       ^^^^^^^^ unknown field
+   |
+   = note: available fields are: `primitives`, `ang`, `center`, `offset`
+
+error[E0282]: type annotations needed
+  --> src/dft/tau.rs:52:27
+   |
+52 |             grad_phi.push(ao.gradient(*c, r));
+   |                           ^^ cannot infer type
+
+warning: unused variable: `pi`
+  --> src/integrals/eri/eri_vrr.rs:61:9
+   |
+61 |     let pi = eri_psss(a, b, c, d, i);
+   |         ^^ help: if this is intentional, prefix it with an underscore: `_pi`
+   |
+   = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `pij`
+  --> src/integrals/eri/eri_vrr.rs:87:9
+   |
+87 |     let pij = eri_ppss(a, b, c, d, i, j);
+   |         ^^^ help: if this is intentional, prefix it with an underscore: `_pij`
+
+warning: unused variable: `shell_centers`
+  --> src/scf/jk.rs:13:5
+   |
+13 |     shell_centers: &[[f64; 3]],
+   |     ^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_shell_centers`
+
+warning: unused variable: `shells`
+ --> src/gradients/two_electron.rs:5:5
+  |
+5 |     shells: &[Shell],
+  |     ^^^^^^ help: if this is intentional, prefix it with an underscore: `_shells`
+
+warning: unused variable: `natoms`
+ --> src/vibrations/mass.rs:9:9
+  |
+9 |     let natoms = masses.len();
+  |         ^^^^^^ help: if this is intentional, prefix it with an underscore: `_natoms`
+
+Some errors have detailed explanations: E0061, E0282, E0308, E0425, E0593, E0599, E0608, E0609.
+For more information about an error, try `rustc --explain E0061`.
+warning: `quantum_engine` (lib) generated 19 warnings
+error: could not compile `quantum_engine` (lib) due to 138 previous errors; 19 warnings emitted

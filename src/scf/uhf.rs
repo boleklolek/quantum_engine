@@ -29,11 +29,15 @@ pub fn run_uhf(
         },
     );
 
-    let t = build_matrix(shells, shell_centers, kinetic_shell_shell);
-    let v = build_matrix(shells, shell_centers, |a, ca, b, cb| {
-        nuclear_attraction_shell_shell(a, ca, b, cb, atoms)
-    });
+
+    let t_vec = build_one_electron_matrix(shells, shell_centers, atoms);
+    let v_vec = build_one_electron_matrix(shells, shell_centers, atoms);
+
+    // Convertir a DMatrix
+    let t = vec2d_ref_to_dmatrix(&t_vec);
+    let v = vec2d_ref_to_dmatrix(&v_vec);
     let hcore = add(&t, &v);
+
 
     // --- Initial guess (same for alpha/beta) ---
     let p0 = core_h_guess(shells, shell_centers, atoms, n_alpha + n_beta);
@@ -50,6 +54,10 @@ pub fn run_uhf(
         // Total density
         let p_tot = add(&p_alpha, &p_beta);
 
+        //let p_tot_vec = dmatrix_to_vec2d(&p_tot);
+        //let (j, _) = build_jk(shells, shell_centers, &p_tot_vec);
+        //let j = vec2d_ref_to_dmatrix(&j);
+
         // J/K from total density
         let (j, _) = build_jk(shells, shell_centers, &p_tot);
         let (_, k_alpha) = build_jk(shells, shell_centers, &p_alpha);
@@ -58,6 +66,19 @@ pub fn run_uhf(
         // Fock matrices
         let f_alpha = build_fock(&hcore, &j, &k_alpha);
         let f_beta  = build_fock(&hcore, &j, &k_beta);
+
+        pub fn build_fock(
+            hcore: &DMatrix<f64>,
+            j: &DMatrix<f64>, 
+            k: &DMatrix<f64>
+            ) -> DMatrix<f64> {
+        // F = H + 2J - K
+            hcore + 2.0 * j - k
+        }
+
+let f_alpha = build_fock(&hcore, &j, &k_alpha);
+let f_beta  = build_fock(&hcore, &j, &k_beta);
+
 
         // DIIS errors
         let err_a = diis_error(&f_alpha, &p_alpha, &s);

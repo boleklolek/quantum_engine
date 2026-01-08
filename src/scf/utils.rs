@@ -24,6 +24,36 @@ pub fn add_inplace(a: &mut DMatrix<f64>, b: &DMatrix<f64>) {
     *a += b;
 }
 
+
+// Convierte Vec<Vec<f64>> a DMatrix<f64>
+pub fn vec2d_to_dmatrix(v: Vec<Vec<f64>>) -> DMatrix<f64> {
+    let nrows = v.len();
+    let ncols = if nrows > 0 { v[0].len() } else { 0 };
+    
+    let mut data = Vec::with_capacity(nrows * ncols);
+    for row in v {
+        data.extend(row);
+    }
+    
+    DMatrix::from_vec(nrows, ncols, data)
+}
+
+/// Convierte &Vec<Vec<f64>> a DMatrix<f64>
+pub fn vec2d_ref_to_dmatrix(v: &Vec<Vec<f64>>) -> DMatrix<f64> {
+    let nrows = v.len();
+    let ncols = if nrows > 0 { v[0].len() } else { 0 };
+    
+    let mut data = Vec::with_capacity(nrows * ncols);
+    for row in v {
+        data.extend(row.iter().copied());
+    }
+    
+    DMatrix::from_vec(nrows, ncols, data)
+}
+
+
+
+
 // ======================================================
 // One-electron matrix
 // ======================================================

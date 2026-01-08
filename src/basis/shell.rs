@@ -34,6 +34,22 @@ impl Shell {
         }
     }
 
+    pub fn num_orbitals(&self) -> usize {
+        // Para un shell con momento angular `l`:
+        // s (l=0): 1 orbital
+        // p (l=1): 3 orbitales  
+        // d (l=2): 6 orbitales (cartesianas) o 5 (esféricas)
+        // f (l=3): 10 orbitales (cartesianas) o 7 (esféricas)
+        
+        match self.ang {
+            0 => 1,   // s
+            1 => 3,   // p
+            2 => 6,   // d (cartesianas, cambia a 5 si usas esféricas)
+            3 => 10,  // f (cartesianas, cambia a 7 si usas esféricas)
+            l => ((l + 1) * (l + 2)) / 2, // fórmula general para cartesianas
+        }
+    }
+
     /// Number of Cartesian atomic orbitals in this shell
     pub fn n_orbitals(&self) -> usize {
         let l = self.ang[0] + self.ang[1] + self.ang[2];
