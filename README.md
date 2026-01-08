@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 Quantum Engine — Option B Release
 
 This package contains the *complete core architecture* of the Quantum Engine:
@@ -18,4 +16,4 @@ This is a **source distribution**.
 External dependencies must be available on the system.
 =======
 # quantum_engine
->>>>>>> 44976223a78a6455292776f8f465eb48b3c87d61
+
